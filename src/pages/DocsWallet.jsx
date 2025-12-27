@@ -7,7 +7,6 @@ import CodeBlock from '@/components/ui/CodeBlock';
 import Callout from '@/components/ui/Callout';
 import ValueDisplay from '@/components/ui/ValueDisplay';
 import AddToMetaMaskButton from '@/components/docs/AddToMetaMaskButton';
-import PlaceholderDataNotice from '@/components/PlaceholderDataNotice';
 
 export default function DocsWallet() {
   const { data: configs } = useQuery({
@@ -72,8 +71,6 @@ async function addMartianChain() {
     <div>
       <h1 className="text-3xl font-bold text-white mb-2">Connect Wallet</h1>
       <p className="text-slate-400 mb-8">Add Martian Chain to MetaMask or any EVM-compatible wallet.</p>
-
-      <PlaceholderDataNotice />
 
       {/* One-Click Add */}
       <section className="mb-10">

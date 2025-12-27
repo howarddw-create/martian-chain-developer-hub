@@ -39,8 +39,6 @@ export default function DocsOverview() {
       <h1 className="text-3xl font-bold text-white mb-2">Welcome to Martian Chain Docs</h1>
       <p className="text-slate-400 mb-8">Everything you need to build on Martian Chain.</p>
 
-      <PlaceholderDataNotice />
-
       {/* Quick Start Checklist */}
       <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-semibold text-white mb-4">Quick Start Checklist</h2>

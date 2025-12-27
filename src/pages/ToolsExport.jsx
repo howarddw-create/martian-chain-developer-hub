@@ -5,7 +5,6 @@ import { Download, FileJson } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/ui/CodeBlock';
 import CopyButton from '@/components/ui/CopyButton';
-import PlaceholderDataNotice from '@/components/PlaceholderDataNotice';
 
 export default function ToolsExport() {
   const { data: configs } = useQuery({
@@ -69,10 +68,6 @@ export default function ToolsExport() {
           <p className="text-slate-400">
             Download or copy the complete network configuration for use in SDKs, scripts, or documentation.
           </p>
-          
-          <div className="mt-4">
-            <PlaceholderDataNotice compact />
-          </div>
         </div>
 
         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-6">

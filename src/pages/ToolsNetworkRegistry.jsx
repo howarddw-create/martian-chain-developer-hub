@@ -3,7 +3,6 @@ import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import { Database } from 'lucide-react';
 import ValueDisplay from '@/components/ui/ValueDisplay';
-import PlaceholderDataNotice from '@/components/PlaceholderDataNotice';
 
 export default function ToolsNetworkRegistry() {
   const { data: configs } = useQuery({
@@ -19,10 +18,6 @@ export default function ToolsNetworkRegistry() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Network Registry</h1>
           <p className="text-slate-400">Single source of truth for Martian Chain constants.</p>
-          
-          <div className="mt-4">
-            <PlaceholderDataNotice compact />
-          </div>
         </div>
 
         {config ? (
