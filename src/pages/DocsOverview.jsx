@@ -7,6 +7,7 @@ import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ValueDisplay from '@/components/ui/ValueDisplay';
 import CopyButton from '@/components/ui/CopyButton';
+import PlaceholderDataNotice from '@/components/PlaceholderDataNotice';
 
 export default function DocsOverview() {
   const { data: configs } = useQuery({
@@ -37,6 +38,8 @@ export default function DocsOverview() {
     <div>
       <h1 className="text-3xl font-bold text-white mb-2">Welcome to Martian Chain Docs</h1>
       <p className="text-slate-400 mb-8">Everything you need to build on Martian Chain.</p>
+
+      <PlaceholderDataNotice />
 
       {/* Quick Start Checklist */}
       <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-8">

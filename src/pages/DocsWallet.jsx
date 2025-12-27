@@ -7,6 +7,7 @@ import CodeBlock from '@/components/ui/CodeBlock';
 import Callout from '@/components/ui/Callout';
 import ValueDisplay from '@/components/ui/ValueDisplay';
 import AddToMetaMaskButton from '@/components/docs/AddToMetaMaskButton';
+import PlaceholderDataNotice from '@/components/PlaceholderDataNotice';
 
 export default function DocsWallet() {
   const { data: configs } = useQuery({
@@ -72,6 +73,8 @@ async function addMartianChain() {
       <h1 className="text-3xl font-bold text-white mb-2">Connect Wallet</h1>
       <p className="text-slate-400 mb-8">Add Martian Chain to MetaMask or any EVM-compatible wallet.</p>
 
+      <PlaceholderDataNotice />
+
       {/* One-Click Add */}
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-white mb-4">Quick Add</h2>
@@ -125,7 +128,7 @@ async function addMartianChain() {
       </section>
 
       <Callout type="tip" title="Multiple RPC Endpoints">
-        We provide 5 RPC endpoints for redundancy. If one is slow, try another. Use RPC1 as your default.
+      Multiple RPC endpoints are provided for redundancy. If one is slow, try another.
       </Callout>
     </div>
   );
