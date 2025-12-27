@@ -36,9 +36,21 @@ export default function ToolsRpcHealth() {
             }),
             signal: AbortSignal.timeout(5000)
           });
-          const data = await response.json();
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          
+          const text = await response.text();
+          let data;
+          try {
+            data = JSON.parse(text);
+          } catch {
+            throw new Error('Invalid JSON response');
+          }
+          
           const latency = Date.now() - start;
-          const blockNumber = parseInt(data.result, 16);
+          const blockNumber = data.result ? parseInt(data.result, 16) : null;
           
           return {
             url,

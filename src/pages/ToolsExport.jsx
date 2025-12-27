@@ -1,7 +1,7 @@
 import React from 'react';
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
-import { Download, Copy, FileJson } from 'lucide-react';
+import { Download, FileJson } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/ui/CodeBlock';
 import CopyButton from '@/components/ui/CopyButton';

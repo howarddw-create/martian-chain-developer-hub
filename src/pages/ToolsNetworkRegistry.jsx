@@ -3,7 +3,7 @@ import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { ExternalLink, Edit, Database } from 'lucide-react';
+import { Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ValueDisplay from '@/components/ui/ValueDisplay';
 
@@ -13,33 +13,14 @@ export default function ToolsNetworkRegistry() {
     queryFn: () => base44.entities.NetworkConfig.list(),
   });
 
-  const { data: user } = useQuery({
-    queryKey: ['currentUser'],
-    queryFn: async () => {
-      const isAuth = await base44.auth.isAuthenticated();
-      if (isAuth) return await base44.auth.me();
-      return null;
-    }
-  });
-
   const config = configs?.[0];
-  const isAdmin = user?.role === 'admin';
 
   return (
     <div className="min-h-screen bg-slate-950">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">Network Registry</h1>
-            <p className="text-slate-400">Single source of truth for Martian Chain constants.</p>
-          </div>
-          {isAdmin && (
-            <Link to={createPageUrl('AdminNetworkConfig')}>
-              <Button className="bg-orange-500 hover:bg-orange-600">
-                <Edit className="h-4 w-4 mr-2" /> Edit Config
-              </Button>
-            </Link>
-          )}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-white mb-2">Network Registry</h1>
+          <p className="text-slate-400">Single source of truth for Martian Chain constants.</p>
         </div>
 
         {config ? (

@@ -12,7 +12,8 @@ import ToolsNetworkRegistry from './pages/ToolsNetworkRegistry';
 import ToolsRpcHealth from './pages/ToolsRpcHealth';
 import ToolsExport from './pages/ToolsExport';
 import Resources from './pages/Resources';
-import AdminNetworkConfig from './pages/AdminNetworkConfig';
+import DocsRecipeRead from './pages/DocsRecipeRead';
+import DocsRecipeSend from './pages/DocsRecipeSend';
 import __Layout from './Layout.jsx';
 
 
@@ -31,7 +32,8 @@ export const PAGES = {
     "ToolsRpcHealth": ToolsRpcHealth,
     "ToolsExport": ToolsExport,
     "Resources": Resources,
-    "AdminNetworkConfig": AdminNetworkConfig,
+    "DocsRecipeRead": DocsRecipeRead,
+    "DocsRecipeSend": DocsRecipeSend,
 }
 
 export const pagesConfig = {
