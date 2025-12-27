@@ -1,7 +1,7 @@
 import React from 'react';
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
-import { ExternalLink, Globe, FileText, Twitter, Github, MessageCircle, Award } from 'lucide-react';
+import { ExternalLink, Globe, FileText, Award } from 'lucide-react';
 
 export default function Resources() {
   const { data: configs } = useQuery({

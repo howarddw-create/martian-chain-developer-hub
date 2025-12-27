@@ -4,7 +4,7 @@ import { createPageUrl } from '@/utils';
 import { cn } from '@/lib/utils';
 import { 
   BookOpen, Zap, Wallet, Server, Search, FileCode, 
-  Code, Send, Radio, HelpCircle, History, ChevronDown
+  Code, Send, Radio, HelpCircle, History
 } from 'lucide-react';
 
 const docsSections = [
